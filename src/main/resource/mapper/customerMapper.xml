@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ezios.wj.mybatis.dao.CustomerDao">
+
+    <select id="selectOneById" resultType="CustomerModel">
+        select * from customer where id = #{id}
+    </select>
+
+    <insert id="insertOne" parameterType="CustomerModel">
+        insert into customer VALUES (#{id},#{name},#{wanted})
+    </insert>
+
+
+</mapper>
